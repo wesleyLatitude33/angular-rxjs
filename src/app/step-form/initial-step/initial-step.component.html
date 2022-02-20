@@ -1,0 +1,52 @@
+<form [formGroup]="form">
+    <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="start center" fxLayoutAlign.gt-sm="center start">
+        <div fxFlex="100%">
+            <mat-form-field appearance="fill">
+                <mat-label>nome Completo</mat-label>
+                <input matInput formControlName="fullName" required>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="10px" fxLayoutAlign="start center" fxLayoutAlign.gt-sm="center start">
+        <div fxFlex="70%">
+            <mat-form-field appearance="fill">
+                <mat-label>Digite seu email</mat-label>
+                <input matInput placeholder="pat@example.com" formControlName="email" required>
+            </mat-form-field>
+        </div>
+        <div fxFlex="30%">
+            <mat-form-field appearance="fill">
+                <mat-label>Digite seu Telefone</mat-label>
+                <span matPrefix>+55 &nbsp;</span>
+                <input matInput placeholder="(99)99999-9999" formControlName="telefone" required>
+                <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="10px" fxLayoutAlign="start center" fxLayoutAlign.gt-sm="center start">
+        <div fxFlex="60%">
+            <mat-form-field appearance="fill">
+                <mat-label>Digite seu Endereço</mat-label>
+                <input matInput placeholder="Rua/Av nove de Julho" formControlName="endereco" required>
+            </mat-form-field>
+        </div>
+        <div fxFlex="30%">
+            <mat-form-field appearance="fill">
+                <mat-label>Digite sua Cidade</mat-label>
+                <mat-select formControlName="cidade" required>
+                    <mat-option value="option">Option</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div fxFlex="10%">
+            <mat-form-field appearance="fill">
+                <mat-label>UF</mat-label>
+                <mat-select formControlName="estado" required>
+                    <mat-option value="option">Option</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+        
+    <button mat-raised-button color="primary" matStepperNext >Próximo</button>
+</form>

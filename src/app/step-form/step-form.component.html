@@ -1,0 +1,15 @@
+<mat-stepper [linear]="isLinear" >
+    <mat-step>
+        <ng-template matStepLabel>Dados pessoais</ng-template>
+        <app-initial-step></app-initial-step>
+    </mat-step>
+    <mat-step >
+        <ng-template matStepLabel>Informações de acesso</ng-template>
+        <app-acces-step></app-acces-step>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Dados complementares</ng-template>
+        <app-valid-step></app-valid-step>
+    </mat-step>
+    
+</mat-stepper>

@@ -1,0 +1,41 @@
+<form [formGroup]="form">
+    <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="10px" fxLayoutAlign="start center"
+        fxLayoutAlign.gt-sm="center start">
+        <div fxFlex="50%">
+            <mat-form-field appearance="fill">
+                <mat-label>Senha</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+            <mat-form-field appearance="fill">
+                <mat-label>Confirmar senha</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="validPass" required>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="10px" fxLayoutAlign="start center"
+        fxLayoutAlign.gt-sm="center start">
+        <div fxFlex="100%">
+            <mat-form-field appearance="fill">
+                <mat-label>Frase secreta</mat-label>
+                <input matInput formControlName="phrase" required>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="10px" fxLayoutAlign="start center"
+        fxLayoutAlign.gt-sm="center start">
+        <div fxFlex="100%">
+            <button mat-raised-button (click)="back()">Voltar</button>
+            <button mat-raised-button color="primary" (click)="onSubmit()">Próximo</button>
+        </div>
+    </div>
+</form>
